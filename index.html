@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Drone-based crop intelligence for farmers in the Netherlands: orthomosaics, plant counts, weed detection, waterlogging detection, and vegetation indices from RGB, multispectral, and thermal imagery." />
+  <meta name="theme-color" content="#FAFCFB" />
+  <title>Aerolytix — Precision Drone Analytics</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="brand__icon">
+          <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" fill="#1B8044" />
+          <path d="M12 16L7 11L8.4 9.6L12 13.2L18.6 6.6L20 8L12 16Z" fill="#FAFCFB" />
+        </svg>
+        <span class="brand__name">Aerolytix</span>
+      </div>
+
+      <nav class="topbar__nav">
+        <a href="#services">Platform</a>
+        <a href="#sensors">Sensors</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#deliverables">Deliverables</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn--primary" href="#contact">Request Demo</a>
+
+      <button class="menu-btn" data-menu-open type="button" aria-haspopup="dialog" aria-controls="menuDialog">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="4" y1="8" x2="20" y2="8"></line>
+          <line x1="4" y1="16" x2="20" y2="16"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <dialog class="menu" id="menuDialog" aria-label="Site menu">
+    <div class="menu__inner">
+      <button class="menu__close" type="button" data-menu-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <nav class="menu__nav">
+        <a class="menu__link" href="#services">Platform</a>
+        <a class="menu__link" href="#sensors">Sensors</a>
+        <a class="menu__link" href="#workflow">Workflow</a>
+        <a class="menu__link" href="#deliverables">Deliverables</a>
+        <a class="menu__link" href="#faq">FAQ</a>
+        <a class="btn btn--primary" href="#contact">Request Demo</a>
+      </nav>
+    </div>
+  </dialog>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__container">
+
+        <div class="hero__content">
+          <div class="badge">Precision Drone Analytics</div>
+          <h1 class="hero__headline">
+            Unlock Your Farm's Potential with <span>Aerial Intelligence.</span>
+          </h1>
+          <p class="hero__sub">
+            Optimize crop health, increase yields, and make data-driven decisions with our advanced aerial drone
+            insights platform across the Netherlands.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--large" href="#contact">Request Demo</a>
+            <a class="btn btn--secondary btn--large" href="#services">Explore Features</a>
+          </div>
+          <div class="hero__metrics">
+            <div class="metric">
+              <span class="metric__value">98.5%</span>
+              <span class="metric__label">Coverage Accuracy</span>
+            </div>
+            <div class="metric">
+              <span class="metric__value">&lt;48h</span>
+              <span class="metric__label">Data Turnaround</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="mock-dashboard">
+            <img src="assets/hero-bg.png" alt="Aerial farm view" class="mock-dashboard__img" />
+            <!-- Mock UI Overlays -->
+            <div class="ui-overlay ui-overlay--box" style="top: 45%; left: 30%; width: 25%; height: 35%;">
+              <div class="ui-overlay__label">ZONE 3: CORN | 96% HEALTHY</div>
+              <div class="ui-overlay__border"></div>
+            </div>
+            <div class="ui-overlay ui-overlay--stress" style="top: 60%; left: 65%; width: 15%; height: 25%;">
+              <div class="ui-overlay__label ui-overlay__label--alert">WATER STRESS DETECTED</div>
+              <div class="ui-overlay__blob"></div>
+            </div>
+
+            <div class="ui-panel ui-panel--metrics">
+              <div class="ui-stat">
+                <div class="ui-stat__label">Est. Plant Count</div>
+                <div class="ui-stat__val">142,500</div>
+              </div>
+              <div class="ui-stat">
+                <div class="ui-stat__label">Stress Area</div>
+                <div class="ui-stat__val alert-text">0.2 ha</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section bg-light" id="services">
+      <div class="container">
+        <div class="section__header text-center">
+          <span class="kicker">Core Use-Cases</span>
+          <h2 class="h2">Actionable layers for better yield.</h2>
+          <p class="lead">We translate complex aerial imagery into clear, actionable maps so you can act exactly where
+            needed.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Plant Counting</h3>
+            <p class="feature-card__text">Verify emergence and stand density, spot skips and clusters, and compare zones
+              across a field.</p>
+            <ul class="check-list">
+              <li>Counts & density heatmap</li>
+              <li>Row/zone segmentation</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Weed Detection</h3>
+            <p class="feature-card__text">Identify weed pressure early to optimize scouting routes and apply treatments
+              only where needed.</p>
+            <ul class="check-list">
+              <li>Weed probability map</li>
+              <li>Priority zones for scouting</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Waterlogging & Stress Detection</h3>
+            <p class="feature-card__text">Utilize early stress identification via NDVI and a radiometric thermal
+              snapshot to detect hidden moisture anomalies and nutrient deficiencies before visual symptoms appear.</p>
+            <ul class="check-list">
+              <li>Early stress identification</li>
+              <li>Thermal snapshot & NDVI</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sensors">
+      <div class="container container--split">
+        <div class="split-content">
+          <span class="kicker">Technology Stack</span>
+          <h2 class="h2">The right sensors for the right problem.</h2>
+          <p class="p-text">We don't just fly standard cameras. We deploy specialized platforms fitted with
+            multispectral and thermal imaging technology to gain deep biological insights you can't see with the naked
+            eye.</p>
+
+          <div class="sensor-list">
+            <div class="sensor-item">
+              <h4 class="sensor-item__title">RGB High-Resolution</h4>
+              <p class="sensor-item__desc">Great for orthomosaics, visual inspection, and counting row crops with
+                absolute clarity.</p>
+            </div>
+            <div class="sensor-item">
+              <h4 class="sensor-item__title">Multispectral (NDVI)</h4>
+              <p class="sensor-item__desc">Detects plant vigor and stress patterns before they are visible in the green
+                spectrum using near-infrared bands.</p>
+            </div>
+            <div class="sensor-item">
+              <h4 class="sensor-item__title">Thermal Radiometric</h4>
+              <p class="sensor-item__desc">Identify temperature anomalies to spot hidden water stress, irrigation leaks,
+                or compacted soil zones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="split-visual border-radius-lg"
+          style="height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #e0e6e2;">
+          <img src="assets/sensor-drone.png" alt="Agriculture drone with multispectral sensor"
+            style="width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-dark text-white" id="workflow">
+      <div class="container">
+        <div class="section__header text-center text-white">
+          <span class="kicker text-white-muted">How It Works</span>
+          <h2 class="h2">From flight to insight.</h2>
+        </div>
+
+        <div class="workflow-grid">
+          <div class="workflow-step">
+            <div class="workflow-step__num">01</div>
+            <h4 class="workflow-step__title">Plan</h4>
+            <p class="workflow-step__desc">We confirm boundaries, crop stage, and desired outcomes.</p>
+          </div>
+          <div class="workflow-step">
+            <div class="workflow-step__num">02</div>
+            <h4 class="workflow-step__title">Capture</h4>
+            <p class="workflow-step__desc">Precision flight using automated drones optimized for weather timing.</p>
+          </div>
+          <div class="workflow-step">
+            <div class="workflow-step__num">03</div>
+            <h4 class="workflow-step__title">Process</h4>
+            <p class="workflow-step__desc">Machine learning converts gigabytes of data into actionable layers.</p>
+          </div>
+          <div class="workflow-step">
+            <div class="workflow-step__num">04</div>
+            <h4 class="workflow-step__title">Deliver</h4>
+            <p class="workflow-step__desc">Load tailored GeoTIFFs or PDFs straight into your agronomy tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__header text-center">
+          <h2 class="h2">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion">
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__title">What do you need from me to start?</summary>
+            <div class="accordion__content">
+              Farm location (or coordinates), approximate field size, crop type, and the decision you want to support
+              (counting, weeds,
+              water, monitoring). If you have target dates (e.g. specific growth stage), include them.
+            </div>
+          </details>
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__title">How accurate are the plant counts?</summary>
+            <div class="accordion__content">
+              Accuracy depends on crop stage, canopy closure, and image resolution. We typically see 95%+ accuracy for
+              row crops pre-canopy closure. We’ll recommend the right timing.
+            </div>
+          </details>
+          <details class="accordion__item" name="faq">
+            <summary class="accordion__title">Can you deliver files for GIS / farm platforms?</summary>
+            <div class="accordion__content">
+              Yes. We deliver PDF for sharing, plus geospatial formats like GeoTIFF and shapefiles so you can load
+              layers directly.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light border-top" id="contact">
+      <div class="container container--split">
+        <div class="contact-info">
+          <h2 class="h2">Ready to optimize your yield?</h2>
+          <p class="p-text">Tell us about your field and goals. We respond within 24 hours to schedule a consultation
+            flight.</p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <strong>Email:</strong>
+              <a href="mailto:info@aerolytix.nl">info@aerolytix.nl</a>
+            </div>
+            <div class="contact-method">
+              <strong>Phone:</strong>
+              <a href="tel:+31657628202">+31 6 57628202</a>
+            </div>
+            <div class="contact-method">
+              <strong>Location:</strong>
+              <span>Netherlands</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="lead-form" id="leadForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Jane Doe" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="jane@farm.nl" />
+            </div>
+            <div class="form-group">
+              <label for="location">Farm Location</label>
+              <input type="text" id="location" name="location" placeholder="e.g. Flevoland" />
+            </div>
+            <div class="form-group">
+              <label for="message">What do you want to achieve?</label>
+              <textarea id="message" name="message" required rows="4"
+                placeholder="Crop, field size, and area of interest..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Inquiry via Email</button>
+            <p class="form-hint">This form opens your email client directly.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">AEROLYTIX</span>
+        <p class="footer__tagline">Precision crop intelligence from the sky.</p>
+      </div>
+      <div class="footer__links">
+        <a href="#services">Platform</a>
+        <a href="#sensors">Sensors</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer__bottom">
+        <span>&copy; 2026 Aerolytix. All rights reserved.</span>
+        <a href="#" data-scroll-top class="back-to-top">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
